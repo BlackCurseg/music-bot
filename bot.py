@@ -28,6 +28,7 @@ song_queue = []
 # --- YouTube-DL Options ---
 # We REMOVED 'noplaylist': 'True' to allow playlists
 # --- YouTube-DL Options ---
+# --- YouTube-DL Options ---
 YDL_OPTIONS = {
     'format': 'bestaudio/best',
     'extractaudio': True,
@@ -39,8 +40,9 @@ YDL_OPTIONS = {
     'logtoconsole': False,
     'quiet': True,
     'no_warnings': True,
-    'default_search': 'ytsearch',  # <-- THIS IS THE KEY CHANGE
-    'source_address': '0.0.0.0',  # Bind to IPv4
+    'default_search': 'ytsearch',
+    'source_address': '0.0.0.0', 
+    'cookiefile': 'cookies.txt', # <--- ADD THIS LINE
 }
 
 FFMPEG_OPTIONS = {
@@ -377,3 +379,4 @@ async def queue(ctx):
 keep_alive()
 # --- Run the Bot ---
 bot.run(TOKEN)
+
