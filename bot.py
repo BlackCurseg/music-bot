@@ -24,28 +24,20 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 # This list will hold the songs to be played
 song_queue = []
 
-# --- YouTube-DL Options ---
-# We REMOVED 'noplaylist': 'True' to allow playlists
-# --- YouTube-DL Options ---
-# --- YouTube-DL Options ---
+
 # --- YouTube-DL Options ---
 YDL_OPTIONS = {
-    'format': 'bestaudio/best',
-    'extractaudio': True,
-    'audioformat': 'mp3',
-    'outtmpl': '%(extractor)s-%(id)s-%(title)s.%(ext)s',
-    'restrictfilenames': True,
+    'format': 'bestaudio/best', # Get the best audio available
+    'noplaylist': True,         # Download single video, not playlist (handled by code)
     'nocheckcertificate': True,
     'ignoreerrors': False,
-    'logtoconsole': True,  # Changed to True so we can see the login code!
-    'quiet': False,        # Changed to False so we can see the login code!
+    'logtoconsole': False,
+    'quiet': True,
     'no_warnings': True,
     'default_search': 'ytsearch',
     'source_address': '0.0.0.0',
-    'cookiefile': 'cookies.txt',
-  
+    'cookiefile': 'cookies.txt', # Uncomment this if you are using the cookie file fix
 }
-
 FFMPEG_OPTIONS = {
     'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
     'options': '-vn'
@@ -380,6 +372,7 @@ async def queue(ctx):
 
 # --- Run the Bot ---
 bot.run(TOKEN)
+
 
 
 
