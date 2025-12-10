@@ -43,8 +43,8 @@ YDL_OPTIONS = {
     'no_warnings': True,
     'default_search': 'ytsearch',
     'source_address': '0.0.0.0',
-    'username': 'oauth2',  # <--- THIS IS THE MAGIC
-    'password': '',        # Leave this empty
+    'cookiefile': 'cookies.txt',
+  
 }
 
 FFMPEG_OPTIONS = {
