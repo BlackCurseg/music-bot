@@ -40,7 +40,7 @@ YDL_OPTIONS = {
     'logtoconsole': True,  # Changed to True so we can see the login code!
     'quiet': False,        # Changed to False so we can see the login code!
     'no_warnings': True,
-    'default_search': 'scsearch',
+    'default_search': 'ytsearch',
     'source_address': '0.0.0.0',
     'cookiefile': 'cookies.txt',
   
@@ -380,6 +380,7 @@ async def queue(ctx):
 
 # --- Run the Bot ---
 bot.run(TOKEN)
+
 
 
 
