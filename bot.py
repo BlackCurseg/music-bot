@@ -377,9 +377,10 @@ async def queue(ctx):
     embed.set_footer(text=f"Total songs in queue: {total_songs}")
     
     await ctx.send(embed=embed)        
-keep_alive()
+
 # --- Run the Bot ---
 bot.run(TOKEN)
+
 
 
 
