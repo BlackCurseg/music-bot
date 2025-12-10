@@ -1,6 +1,7 @@
 discord.py
 yt-dlp
 python-dotenv
-ffpmeg
+ffmpeg
 flask
+
 PyNaCl
