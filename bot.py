@@ -26,7 +26,7 @@ song_queue = []
 
 
 # --- YouTube-DL Options ---
-DL_OPTIONS = {
+YDL_OPTIONS = {
     'format': 'bestaudio/best',
     'extractaudio': True,
     'audioformat': 'mp3',
@@ -375,6 +375,7 @@ async def queue(ctx):
 
 # --- Run the Bot ---
 bot.run(TOKEN)
+
 
 
 
